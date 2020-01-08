@@ -1,0 +1,12 @@
+rule "rollerShutterBedroomUpRule"
+when
+    Time cron "0 45 6 ? * *" // everyday at 6:45
+then
+    rollerShutterBedroom.sendCommand("UP")
+end
+rule "rollerShutterBedroomDownRule"
+when
+    Time cron "0 0 19 ? * *" // everyday at 19:00
+then
+    rollerShutterBedroom.sendCommand("DOWN")
+end
